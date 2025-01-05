@@ -1,0 +1,29 @@
+class firstkz{
+    getInfo(){
+
+        return{
+            id:'first', 
+            name:'递交扩展V1.0',
+            color:'blue',
+            blocks:[
+                {
+                    opcode:'first',
+                    blockType:Scratch.BlockType.REPORTER,
+                    text:'将[temp]通过本积木块递交下一个',
+                    arguments:{
+                        temp:{                                  
+                            Type:Scratch.ArgumentType.STRING,
+                            defaultValue:''
+                        }
+                    }
+
+                }
+            ]
+
+        }
+    }
+    first(args){
+        return args.temp
+    }
+}
+Scratch.extensions.register(new firstkz())
